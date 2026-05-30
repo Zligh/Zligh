@@ -1,1 +1,3 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=FF8800&background=00000000&center=true&vCenter=true&width=700&lines=%24+whoami;FlowNodes;Rust+Developer;Bug+Bounty+Hunter;Reverse+Engineer)](https://git.io/typing-svg)
+<div align="center">
+  <img src="./terminal.svg" width="100%">
+</div>
