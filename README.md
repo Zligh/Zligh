@@ -1,1 +1,4 @@
+
 ![Terminal](./terminal.svg)
+
+</div>
