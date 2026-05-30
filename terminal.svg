@@ -1,85 +1,55 @@
 <svg viewBox="0 0 800 400" xmlns="http://w3.org">
-  <style>
-    /* Плавне дихання головного тексту */
-    @keyframes textPulse {
-      0% { opacity: 0.8; }
-      50% { opacity: 1; }
-      100% { opacity: 0.8; }
-    }
-    /* Повільний рух туманного фону (ефект гірських хвиль) */
-    @keyframes floatLeft {
-      0% { transform: translate(0px, 0px) scale(1); }
-      50% { transform: translate(-30px, 15px) scale(1.05); }
-      100% { transform: translate(0px, 0px) scale(1); }
-    }
-    @keyframes floatRight {
-      0% { transform: translate(0px, 0px) scale(1); }
-      50% { transform: translate(40px, -10px) scale(0.95); }
-      100% { transform: translate(0px, 0px) scale(1); }
-    }
-    .pulsing-text {
-      animation: textPulse 5s infinite ease-in-out;
-    }
-    .fog-left {
-      transform-origin: 200px 300px;
-      animation: floatLeft 16s infinite ease-in-out;
-    }
-    .fog-right {
-      transform-origin: 600px 320px;
-      animation: floatRight 20s infinite ease-in-out;
-    }
-  </style>
-
   <defs>
-    <!-- М'який градієнт для глибокого фону -->
+    <!-- Глибокий темний фон -->
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#0a0a0d" />
       <stop offset="100%" stop-color="#030304" />
     </linearGradient>
 
-    <!-- Тонка рамка з ефектом скла -->
+    <!-- Тонка скляна рамка -->
     <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
     </linearGradient>
 
-    <!-- Розмиття для створення м'якого туману з референсу -->
-    <filter id="fogBlur" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="25" />
+    <!-- М'яке розмиття для туманних пагорбів -->
+    <filter id="fogBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" />
     </filter>
   </defs>
 
   <!-- Задній фон -->
   <rect width="800" height="400" fill="url(#bgGrad)"/>
   
-  <!-- Монохромний туманний пейзаж (безпечна альтернатива хвилям) -->
+  <!-- Монохромний туманний пейзаж на чистому SVG (без CSS класів) -->
   <g filter="url(#fogBlur)">
     <!-- Лівий темний пагорб -->
-    <circle class="fog-left" cx="150" cy="360" r="180" fill="#16171d" opacity="0.6" />
+    <circle cx="150" cy="360" r="180" fill="#16171d" opacity="0.6" />
     <!-- Правий пагорб -->
-    <circle class="fog-right" cx="650" cy="380" r="220" fill="#111216" opacity="0.8" />
+    <circle cx="650" cy="380" r="220" fill="#111216" opacity="0.8" />
     <!-- Центральний м'який перехід -->
     <ellipse cx="400" cy="390" rx="300" ry="100" fill="#1d1e26" opacity="0.3" />
   </g>
 
-  <!-- Рамка мінімалістичного інтерфейсу -->
+  <!-- Контейнер інтерфейсу -->
   <g>
     <!-- Основне вікно -->
     <rect x="60" y="60" width="680" height="280" rx="14" fill="#0d0e12" fill-opacity="0.4" stroke="url(#borderGrad)" stroke-width="1.2" />
     
-    <!-- Кнопки керування (монохромні, ледь помітні) -->
+    <!-- Кнопки керування вікном (монохромні) -->
     <circle cx="95" cy="90" r="5" fill="#ffffff" opacity="0.15"/>
     <circle cx="115" cy="90" r="5" fill="#ffffff" opacity="0.1"/>
     <circle cx="135" cy="90" r="5" fill="#ffffff" opacity="0.07"/>
     
-    <!-- Шлях користувача (замінено спецсимволи на безпечні) -->
+    <!-- Назва терміналу / Шлях користувача -->
     <text x="165" y="94" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="500" fill="#ffffff" opacity="0.3">
       zligh:~/rust
     </text>
 
-    <!-- Головний текст: Чистий білий, з безпечною CSS-анімацією -->
-    <text class="pulsing-text" x="400" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">
+    <!-- Головний текст: Чистий білий, з інлайн-анімацією, яку GitHub дозволяє -->
+    <text x="400" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">
       Just Use Rust. Brutal
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite" />
     </text>
 
     <!-- Нижня роздільна лінія -->
