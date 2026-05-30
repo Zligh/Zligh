@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="./terminal.svg" width="100%">
+  <img src="./terminal.sv" width="100%">
 </div>
