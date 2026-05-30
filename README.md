@@ -2,7 +2,6 @@
 
 <div align="center">
 
-```svg
 <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="glow">
@@ -46,6 +45,5 @@
   <!-- Main text -->
   <text class="text" x="300" y="135" font-family="Monaco, monospace" font-size="32" font-weight="bold" fill="#ff6b00" text-anchor="middle" filter="url(#glow)">Just Use Rust. Brutal</text>
 </svg>
-```
 
 </div>
