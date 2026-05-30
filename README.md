@@ -2,7 +2,6 @@
 
 <div align="center">
 
-```html
 <div class="terminal-container">
   <div class="terminal-header">
     <span class="terminal-title">zligh@rust:~$</span>
@@ -12,15 +11,8 @@
     <div class="terminal-text">Just Use Rust. Brutal</div>
   </div>
 </div>
-```
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .terminal-container {
   position: relative;
   width: 100%;
@@ -30,9 +22,7 @@
   border: 2px solid rgba(255, 107, 0, 0.3);
   border-radius: 12px;
   backdrop-filter: blur(10px);
-  box-shadow: 
-    0 0 30px rgba(255, 107, 0, 0.1),
-    inset 0 0 30px rgba(255, 107, 0, 0.05);
+  box-shadow: 0 0 30px rgba(255, 107, 0, 0.1), inset 0 0 30px rgba(255, 107, 0, 0.05);
   overflow: hidden;
   animation: glassglow 3s ease-in-out infinite;
 }
@@ -40,15 +30,11 @@
 @keyframes glassglow {
   0%, 100% {
     border-color: rgba(255, 107, 0, 0.3);
-    box-shadow: 
-      0 0 30px rgba(255, 107, 0, 0.1),
-      inset 0 0 30px rgba(255, 107, 0, 0.05);
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.1), inset 0 0 30px rgba(255, 107, 0, 0.05);
   }
   50% {
     border-color: rgba(255, 107, 0, 0.6);
-    box-shadow: 
-      0 0 50px rgba(255, 107, 0, 0.2),
-      inset 0 0 40px rgba(255, 107, 0, 0.1);
+    box-shadow: 0 0 50px rgba(255, 107, 0, 0.2), inset 0 0 40px rgba(255, 107, 0, 0.1);
   }
 }
 
@@ -84,16 +70,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(255, 107, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(255, 107, 0, 0.05) 0%, transparent 50%),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 2px,
-      rgba(255, 107, 0, 0.05) 2px,
-      rgba(255, 107, 0, 0.05) 4px
-    );
+  background: radial-gradient(circle at 20% 50%, rgba(255, 107, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(255, 107, 0, 0.05) 0%, transparent 50%), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 107, 0, 0.05) 2px, rgba(255, 107, 0, 0.05) 4px);
   animation: waterflow 4s ease-in-out infinite;
   pointer-events: none;
 }
@@ -115,9 +92,7 @@
   font-size: 28px;
   font-weight: bold;
   color: #ff6b00;
-  text-shadow: 
-    0 0 10px rgba(255, 107, 0, 0.8),
-    0 0 20px rgba(255, 107, 0, 0.4);
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.8), 0 0 20px rgba(255, 107, 0, 0.4);
   letter-spacing: 2px;
   animation: typewriter 0.5s steps(24, end), glow 2.5s ease-in-out infinite 0.5s;
   white-space: nowrap;
@@ -134,23 +109,10 @@
 
 @keyframes glow {
   0%, 100% {
-    text-shadow: 
-      0 0 10px rgba(255, 107, 0, 0.8),
-      0 0 20px rgba(255, 107, 0, 0.4);
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.8), 0 0 20px rgba(255, 107, 0, 0.4);
   }
   50% {
-    text-shadow: 
-      0 0 20px rgba(255, 107, 0, 1),
-      0 0 40px rgba(255, 107, 0, 0.6),
-      0 0 60px rgba(255, 107, 0, 0.3);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .terminal-text,
-  .water-animation,
-  .terminal-container {
-    animation: none;
+    text-shadow: 0 0 20px rgba(255, 107, 0, 1), 0 0 40px rgba(255, 107, 0, 0.6), 0 0 60px rgba(255, 107, 0, 0.3);
   }
 }
 </style>
