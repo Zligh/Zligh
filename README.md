@@ -1,35 +1,24 @@
-# Zligh 🧠🦀
+<svg fill="none" viewBox="0 0 600 100" width="600" height="100" xmlns="http://w3.org">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://w3.org">
+      <style>
+        .brutal-text {
+          font-family: 'Courier New', monospace;
+          font-size: 26px;
+          font-weight: bold;
+          color: #a370f7; /* Твій фірмовий фіолетовий */
+          text-shadow: 0 0 10px rgba(163, 112, 247, 0.6);
+          opacity: 0;
+          animation: bootGlow 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        @keyframes bootGlow {
+          0% { transform: scale(0.8) translateY(10px); opacity: 0; filter: brightness(3); }
+          100% { transform: scale(1) translateY(0); opacity: 1; filter: brightness(1); }
+        }
+      </style>
+      <div class="brutal-text">> Just Use Rust. Brutal. _</div>
+    </div>
+  </foreignObject>
+</svg>
 
-<p align="left">
-  <!-- Ця анімація друку працює ідеально без жодних Amo-помилок -->
-  <img src="https://demolab.com" alt="Typing SVG" />
-</p>
-
----
-
-### 🏭 Low-Level Systems Core
-
-```rust
-impl Zligh {
-    pub fn info() {
-        println!("Core Language : Rust nightly v1.94.0");
-        println!("Target-CPU    : native-x86_64 (optimized thread pool)");
-        println!("Architecture  : Asynchronous 3D Game Engine (0.5MB)");
-        println!("Data Pipeline : Deep Source Agnosticism (IO stream independent)");
-        println!("Active Focus  : Decoupled Editor Pipeline (Split Render + egui)");
-    }
-}
-```
-
----
-
-### 🎹 Hardware Submodules & Environment
-- **Current Layout :** Lemokey X4 *(Keychron Super Red switches / Clack profile)*
-- **Inbound Patch :** `Silakka54` Split Ortholinear Hot-Swap *(Leobog Graywood V4 Creamy-Thock Edition)*
-
----
-
-<p align="left">
-  <!-- Новий, 100% надійний неоновий лічильник переглядів -->
-  <img src="https://glitch.me" alt="Profile Views Counter" />
-</p>
+![Zligh Core](./core.svg)
