@@ -1,1 +1,1 @@
-![Terminal](./terminal.svg?sanitize=true)
+![Terminal](./terminal.svg)
