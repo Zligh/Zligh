@@ -1,4 +1,3 @@
-![Zligh Core](./core.svg)
 
 <div align="center">
 
