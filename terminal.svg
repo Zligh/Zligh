@@ -1,87 +1,93 @@
 <svg viewBox="0 0 800 400" xmlns="http://w3.org">
+  <style>
+    /* Плавне дихання головного тексту */
+    @keyframes textPulse {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+    /* Повільний рух туманного фону (ефект гірських хвиль) */
+    @keyframes floatLeft {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-30px, 15px) scale(1.05); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    @keyframes floatRight {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(40px, -10px) scale(0.95); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    .pulsing-text {
+      animation: textPulse 5s infinite ease-in-out;
+    }
+    .fog-left {
+      transform-origin: 200px 300px;
+      animation: floatLeft 16s infinite ease-in-out;
+    }
+    .fog-right {
+      transform-origin: 600px 320px;
+      animation: floatRight 20s infinite ease-in-out;
+    }
+  </style>
+
   <defs>
-    <!-- Плавне та м'яке розмиття для заднього фону -->
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
+    <!-- М'який градієнт для глибокого фону -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0d" />
+      <stop offset="100%" stop-color="#030304" />
+    </linearGradient>
+
+    <!-- Тонка рамка з ефектом скла -->
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Розмиття для створення м'якого туману з референсу -->
+    <filter id="fogBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="25" />
     </filter>
-
-    <!-- Градієнт для глибокого темного фону -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d0e11;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#050506;stop-opacity:1" />
-    </linearGradient>
-
-    <!-- Елегантний градієнт для рамки "матового скла" -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.02" />
-    </linearGradient>
-
-    <!-- М'які монохромні градієнти для фонових хвиль -->
-    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1c1d24;stop-opacity:0.6" />
-      <stop offset="100%" style="stop-color:#0d0e11;stop-opacity:0" />
-    </linearGradient>
-
-    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#252730;stop-opacity:0.4" />
-      <stop offset="100%" style="stop-color:#050506;stop-opacity:0" />
-    </linearGradient>
   </defs>
 
-  <!-- Головний темний фон -->
+  <!-- Задній фон -->
   <rect width="800" height="400" fill="url(#bgGrad)"/>
   
-  <!-- Скандинавські плавні фонові пейзажні хвилі (імітація гір) -->
-  <g opacity="0.7">
-    <!-- Задня хвиля з повільним рухом вбік -->
-    <path d="M 0 280 Q 200 220 400 270 T 800 240 L 800 400 L 0 400 Z" fill="url(#waveGrad1)">
-      <animate attributeName="d" 
-               values="M 0 280 Q 200 220 400 270 T 800 240 L 800 400 L 0 400 Z;
-                       M 0 270 Q 250 240 450 250 T 800 260 L 800 400 L 0 400 Z;
-                       M 0 280 Q 200 220 400 270 T 800 240 L 800 400 L 0 400 Z" 
-               dur="15s" repeatCount="indefinite"/>
-    </path>
-
-    <!-- Передня хвиля, що рухається у протилежний бік -->
-    <path d="M 0 310 Q 250 260 500 320 T 800 290 L 800 400 L 0 400 Z" fill="url(#waveGrad2)">
-      <animate attributeName="d" 
-               values="M 0 310 Q 250 260 500 320 T 800 290 L 800 400 L 0 400 Z;
-                       M 0 320 Q 200 290 480 300 T 800 310 L 800 400 L 0 400 Z;
-                       M 0 310 Q 250 260 500 320 T 800 290 L 800 400 L 0 400 Z" 
-               dur="20s" repeatCount="indefinite"/>
-    </path>
+  <!-- Монохромний туманний пейзаж (безпечна альтернатива хвилям) -->
+  <g filter="url(#fogBlur)">
+    <!-- Лівий темний пагорб -->
+    <circle class="fog-left" cx="150" cy="360" r="180" fill="#16171d" opacity="0.6" />
+    <!-- Правий пагорб -->
+    <circle class="fog-right" cx="650" cy="380" r="220" fill="#111216" opacity="0.8" />
+    <!-- Центральний м'який перехід -->
+    <ellipse cx="400" cy="390" rx="300" ry="100" fill="#1d1e26" opacity="0.3" />
   </g>
 
-  <!-- Контейнер у стилі мінімалістичного вікна терміналу -->
+  <!-- Рамка мінімалістичного інтерфейсу -->
   <g>
-    <!-- Основна підкладка з ледь помітним розмиттям та благородною світлою рамкою -->
-    <rect x="60" y="60" width="680" height="280" rx="16" fill="#111216" fill-opacity="0.5" stroke="url(#borderGrad)" stroke-width="1.5" />
+    <!-- Основне вікно -->
+    <rect x="60" y="60" width="680" height="280" rx="14" fill="#0d0e12" fill-opacity="0.4" stroke="url(#borderGrad)" stroke-width="1.2" />
     
-    <!-- Кнопки керування у стилі macOS, але приглушені (монохромні), щоб не привертати зайвої уваги -->
-    <circle cx="95" cy="90" r="5.5" fill="#ffffff" opacity="0.2"/>
-    <circle cx="115" cy="90" r="5.5" fill="#ffffff" opacity="0.15"/>
-    <circle cx="135" cy="90" r="5.5" fill="#ffffff" opacity="0.1"/>
+    <!-- Кнопки керування (монохромні, ледь помітні) -->
+    <circle cx="95" cy="90" r="5" fill="#ffffff" opacity="0.15"/>
+    <circle cx="115" cy="90" r="5" fill="#ffffff" opacity="0.1"/>
+    <circle cx="135" cy="90" r="5" fill="#ffffff" opacity="0.07"/>
     
-    <!-- Назва терміналу / Шлях користувача -->
-    <text x="165" y="94" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="500" fill="#ffffff" opacity="0.35">
-      zligh@rust:~$
+    <!-- Шлях користувача (замінено спецсимволи на безпечні) -->
+    <text x="165" y="94" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="500" fill="#ffffff" opacity="0.3">
+      zligh:~/rust
     </text>
 
-    <!-- Головний текст: Чистий, великий, з дуже м'якою анімацією «дихання» (зміни прозорості) -->
-    <text x="400" y="205" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">
+    <!-- Головний текст: Чистий білий, з безпечною CSS-анімацією -->
+    <text class="pulsing-text" x="400" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">
       Just Use Rust. Brutal
-      <animate attributeName="opacity" values="0.85;1;0.85" dur="4.5s" repeatCount="indefinite"/>
     </text>
 
-    <!-- Декоративний нижній роздільник із м'яким згасанням до країв -->
-    <line x1="250" y1="240" x2="550" y2="240" stroke="#ffffff" stroke-width="1" opacity="0.08">
-      <animate attributeName="opacity" values="0.05;0.12;0.05" dur="6s" repeatCount="indefinite"/>
-    </line>
+    <!-- Нижня роздільна лінія -->
+    <line x1="280" y1="245" x2="520" y2="245" stroke="#ffffff" stroke-width="1" opacity="0.06" />
     
-    <!-- Нижня інформаційна панель -->
-    <text x="400" y="275" font-family="Courier New, Courier, monospace" font-size="13" fill="#ffffff" text-anchor="middle" opacity="0.25" letter-spacing="1">
-      ~/projects/rust
+    <!-- Поточна директорія -->
+    <text x="400" y="278" font-family="Consolas, Monaco, monospace" font-size="12" fill="#ffffff" text-anchor="middle" opacity="0.2" letter-spacing="1">
+      src/main.rs
     </text>
   </g>
 </svg>
