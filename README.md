@@ -1,37 +1,43 @@
 # Zligh 🧠🦀
 
-> "Just Use Rust. Brutal." — For Systems & Core Code.
+<p align="left">
+  <!-- Ультимативна жива анімація друку твоего маніфесту -->
+  <img src="https://demolab.com" alt="Typing SVG" />
+</p>
 
 ---
 
-```bash
-\$ neofetch --backend rawsh-core
+### 🏭 Low-Level Systems Core
 
-              Zligh@ados-engine
-              -----------------
-   #####      OS: Ubuntu Linux Core (Custom Minimal Layout)
-  #######     Kernel: Rust nightly v1.94.0 
-  ##O#O##     Uptime: 24/7 non-stop grind
-  #######     Shell: rawsh-core (Custom built Shell from scratch)
-  #######     CPU: native-x86 (Optimized thread pool)
-   #####      RAM: Max efficiency / Zero Throttling
-
-\$ cat active_architecture.log
-
-- ados-engine   :: Private asynchronous 3D Game Engine (0.5MB standalone binary).
-- math-kernel   :: Multi-threaded vector processing loop [1,000,000,000 ops in 55ms].
-- mulados-lang  :: Custom token lexer/interpreter for internal .ms scenario scripts.
-- data-pipeline :: Deep source agnosticism (File, Network, IO stream independent).
-- editor-pipe   :: Asynchronous split-window (wgpu Render + egui Editor Layout).
-
-\$ cat system_manifest.env
-
-- codeline_rule: "Just Use Rust. Brutal."
-- current_kb: Lemokey X4 (Keychron Super Red switches / Clack sound signature)
-- inbound_kb: Silakka54 Split Ortholinear Hot-Swap (Leobog Graywood V4 Creamy-Thock)
+```rust
+impl Zligh {
+    pub fn info() {
+        println!("Core Language: Rust nightly v1.94.0");
+        println!("Target-CPU   : native-x86_64");
+        println!("Architecture : Asynchronous 3D Game Engine (0.5MB)");
+        println!("Data Pipeline: Pure Source Agnosticism");
+    }
+}
 ```
 
 ---
+
+### 📊 Live Repository Statistics
 <p align="left">
-  <img src="https://komarev.com" />
+  <!-- Потужні неонові графіки, які самі підтягують твої комміти в тему TokyoNight -->
+  <img src="https://vercel.app" height="160em" />
+  <img src="https://vercel.app" height="160em" />
+</p>
+
+---
+
+### 🎹 Hardware Submodules
+- **Current KB:** Lemokey X4 *(Keychron Super Red switches / Clack profile)*
+- **Inbound KB:** `Silakka54` Split Ortholinear Hot-Swap *(Leobog Graywood V4 Creamy-Thock Edition)*
+
+---
+
+<p align="left">
+  <!-- Новий, 100% робочий неоновий лічильник відвідувань, який ніколи не зламається -->
+  <img src="https://glitch.me" alt="Profile Views Counter" />
 </p>
