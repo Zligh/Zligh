@@ -259,7 +259,7 @@
     <g class="mono" font-size="62" font-weight="500" fill="#f9f6ff" filter="url(#textGlow)">
       <text x="410" y="558">Just Use Rust.</text>
 
-      <text x="860" y="558">
+      <text x="900" y="558">
         Brutal
         <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
                  calcMode="discrete"
@@ -267,7 +267,7 @@
                  keyTimes="0;0.33;0.66;1"/>
       </text>
 
-      <text x="860" y="558" opacity="0">
+      <text x="900" y="558" opacity="0">
         Brvtal
         <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
                  calcMode="discrete"
@@ -275,7 +275,7 @@
                  keyTimes="0;0.33;0.66;1"/>
       </text>
 
-      <text x="860" y="558" opacity="0">
+      <text x="900" y="558" opacity="0">
         Brut4l
         <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
                  calcMode="discrete"
