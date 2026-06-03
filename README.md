@@ -4,5 +4,5 @@
 </div>
 
 <div align="center">
-  <img src="./views_counter.svg" width="260" height="45" alt="Views Counter">
+  <img src="./views.svg" width="260" height="45" alt="Views Counter">
 </div>
