@@ -4,5 +4,5 @@
 </div>
 
 <div align="center">
-  <img src="./views.svg" width="260" height="45" alt="Views Counter">
+  <img src="https://countapi.xyz/badge/Zligh.Zligh/views?color=ff6a00&label=VIEWS" alt="Views Counter">
 </div>
