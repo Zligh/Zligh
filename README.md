@@ -4,7 +4,5 @@
 </div>
 
 <div align="center">
-  
-[![views](https://komarev.com/ghpvc/?username=Zligh&color=ff6a00&style=flat-square&label=VIEWS)](https://github.com/Zligh)
-
+  <img src="./views_counter.svg" width="260" height="45" alt="Views Counter">
 </div>
