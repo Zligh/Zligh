@@ -2,24 +2,19 @@
   <img src="./banner_window.svg" width="110%">
 
 </div>
-<div align="center" style="position: relative; width: 500px; margin: auto;">
+
+<div align="center">
 
 <img
-  src="./views_counter.svg"
+   src="./views_counter.svg"
   width="500"
-/>
+/><br>
 
 <img
-  src="https://komarev.com/ghpvc/?username=Zligh&style=flat-square&color=1a1a22"
-  style="
-    position:absolute;
-    opacity:0;
-    pointer-events:none;
-    left:0;
-    top:0;
-    width:1px;
-    height:1px;
-  "
+  src="https://komarev.com/ghpvc/?username=Zligh&style=flat-square&color=000000"
+  height="1"
+  width="1"
+  style="opacity:0;"
 />
 
 </div>
