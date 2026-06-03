@@ -5,7 +5,7 @@
 <div align="center" style="position: relative; width: 500px; margin: auto;">
 
 <img
-  src="https://raw.githubusercontent.com/Zligh/Zligh/main/assets/visitor-counter.svg"
+  src="./views_counter.svg"
   width="500"
 />
 
