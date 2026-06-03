@@ -3,5 +3,5 @@
 </div>
 
 <div align="center">
-  <img src="./views_counter.svg" alt="Profile Views" width="300">
+  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=Zligh.Zligh&left_color=orange&right_color=ff8c42)
 </div>
