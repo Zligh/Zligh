@@ -4,5 +4,7 @@
 </div>
 
 <div align="center">
-  <img src="https://countapi.xyz/badge/Zligh.Zligh/views?color=ff6a00&label=VIEWS" alt="Views Counter">
+  
+[![views](https://komarev.com/ghpvc/?username=Zligh&color=ff6a00&style=flat-square&label=VIEWS)](https://github.com/Zligh)
+
 </div>
