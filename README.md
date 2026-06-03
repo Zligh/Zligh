@@ -4,5 +4,5 @@
 </div>
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Zligh&color=ff6a00&style=flat-square&label=VIEWS" alt="Views Counter">
+  <img src="https://raw.githubusercontent.com/Zligh/Zligh/main/views_counter_v2.svg" alt="Views Counter">
 </div>
