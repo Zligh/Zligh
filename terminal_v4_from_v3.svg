@@ -1,305 +1,161 @@
-<svg viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" style="background-color:#030305; overflow:hidden;">
   <defs>
-    <style>
-      :root{
-        --glass-top:#2a2d36;
-        --glass-mid:#171a21;
-        --glass-bottom:#0d0f14;
-        --glass-stroke:rgba(255,255,255,0.14);
-        --glass-inner:rgba(255,255,255,0.10);
-        --topbar-0:#291843;
-        --topbar-1:#3b2163;
-        --topbar-2:#221338;
-        --text:#f6f3ff;
-        --text-soft:#d7cbff;
-        --prompt:#d7c8ff;
-        --accent:#b98dff;
-        --accent-2:#7d4dff;
-        --button-red:#ff5f57;
-        --button-yellow:#ffbd2e;
-        --button-green:#28c840;
-      }
-      .mono{font-family:"JetBrains Mono",Consolas,monospace;}
-    </style>
-
-    <linearGradient id="glassFill" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#2c3039" stop-opacity="0.88"/>
-      <stop offset="18%" stop-color="#1d2028" stop-opacity="0.94"/>
-      <stop offset="100%" stop-color="#0c0f14" stop-opacity="0.97"/>
-    </linearGradient>
-
-    <linearGradient id="topbarFill" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2a1846"/>
-      <stop offset="50%" stop-color="#3a2163"/>
-      <stop offset="100%" stop-color="#25153d"/>
-    </linearGradient>
-
-    <linearGradient id="windowEdge" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
-      <stop offset="22%" stop-color="#ceb3ff" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
-    </linearGradient>
-
-    <linearGradient id="innerEdge" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.20"/>
-      <stop offset="100%" stop-color="#cdaeff" stop-opacity="0.08"/>
-    </linearGradient>
-
-    <linearGradient id="auroraStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="18%" stop-color="#e8d6ff" stop-opacity="0.40"/>
-      <stop offset="42%" stop-color="#c38cff" stop-opacity="0.90"/>
-      <stop offset="58%" stop-color="#9d66ff" stop-opacity="0.95"/>
-      <stop offset="78%" stop-color="#d7b8ff" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-
-    <radialGradient id="auroraBlob" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#efdeff" stop-opacity="0.92"/>
-      <stop offset="34%" stop-color="#c48cff" stop-opacity="0.50"/>
-      <stop offset="68%" stop-color="#8f5cff" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#8f5cff" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="lowerGlow" cx="50%" cy="50%" r="55%">
-      <stop offset="0%" stop-color="#b98dff" stop-opacity="0.24"/>
-      <stop offset="60%" stop-color="#b98dff" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#b98dff" stop-opacity="0"/>
-    </radialGradient>
-
-    <filter id="auroraBlur" x="-30%" y="-50%" width="160%" height="200%">
-      <feGaussianBlur stdDeviation="18"/>
+    <filter id="macos-shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="40" stdDeviation="50" flood-color="#000000" flood-opacity="0.75"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.45"/>
     </filter>
 
-    <filter id="windowShadow" x="-25%" y="-25%" width="150%" height="180%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="18" result="blur"/>
-      <feOffset dy="18" dx="0" result="off"/>
-      <feColorMatrix in="off" type="matrix"
-        values="0 0 0 0 0.04
-                0 0 0 0 0.03
-                0 0 0 0 0.08
-                0 0 0 0.66 0" result="shadow"/>
+    <filter id="button-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge>
-        <feMergeNode in="shadow"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="7" result="b"/>
-      <feColorMatrix in="b" type="matrix"
-        values="1 0 0 0 0.12
-                0 1 0 0 0.08
-                0 0 1 0 0.22
-                0 0 0 1 0"/>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="cursor-shadow" x="-250%" y="-250%" width="600%" height="600%">
+      <feDropShadow dx="-24" dy="48" stdDeviation="24" flood-color="#000000" flood-opacity="0.65"/>
     </filter>
 
-    <filter id="bigBlur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="34"/>
-    </filter>
-
-    <filter id="noise" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" seed="7" result="n"/>
-      <feColorMatrix in="n" type="saturate" values="0"/>
-      <feComponentTransfer>
-        <feFuncA type="table" tableValues="0 0.045"/>
+    <filter id="rust-glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComponentTransfer in="blur" result="dimBlur">
+        <feFuncA type="linear" slope="0.25"/>
       </feComponentTransfer>
-    </filter>
-
-    <filter id="textGlow" x="-30%" y="-50%" width="170%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feColorMatrix in="blur" type="matrix"
-        values="1 0 0 0 0.22
-                0 1 0 0 0.10
-                0 0 1 0 0.28
-                0 0 0 1 0" result="colored"/>
       <feMerge>
-        <feMergeNode in="colored"/>
-        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="dimBlur" />
+        <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
-    <clipPath id="terminalClip">
-      <rect x="150" y="220" width="1236" height="560" rx="28"/>
-    </clipPath>
+    <linearGradient id="window-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141418" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0.97"/>
+    </linearGradient>
+
+    <linearGradient id="titlebar-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#202025" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#151518" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="wave-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#101016" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#060608" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="wave-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090d" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#161622" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#07070a" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="wave-grad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#030304" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#0c0c12" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#020203" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <style>
+      .monospace-text {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 36px;
+        letter-spacing: 0.4px;
+        font-weight: 450;
+        fill: #e4e4e9;
+      }
+      .title-text {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        fill: #85858b;
+      }
+      
+      /* Smooth, single-axis drift for the window panel */
+      @keyframes windowFloatY {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+      }
+      
+      /* Perfect multi-axis fluid loops with zero clipping boundaries */
+      @keyframes cursorFloatX {
+        0%, 100% { transform: translateX(-25px); }
+        50% { transform: translateX(25px); }
+      }
+      @keyframes cursorFloatY {
+        0%, 100% { transform: translateY(15px); }
+        50% { transform: translateY(-15px); }
+      }
+
+      @keyframes cursorFade {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .blinking-cursor {
+        animation: cursorFade 1.3s ease-in-out infinite;
+      }
+
+      @keyframes waveFloatBack {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(-100px, 35px) scale(1.04); }
+      }
+      @keyframes waveFloatMid {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(120px, -45px) scale(1.03); }
+      }
+      @keyframes waveFloatFront {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(-70px, -60px) scale(1.05); }
+      }
+    </style>
   </defs>
 
-  <!-- transparent background -->
-
-  <!-- soft ambient outside terminal -->
-  <g filter="url(#auroraBlur)" opacity="0.9">
-    <path d="M 0 470 C 180 360, 380 610, 620 470 S 1030 305, 1536 500"
-          fill="none" stroke="url(#auroraStroke)" stroke-width="58" stroke-linecap="round" opacity="0.55">
-      <animate attributeName="d" dur="18s" repeatCount="indefinite"
-               values="
-               M 0 470 C 180 360, 380 610, 620 470 S 1030 305, 1536 500;
-               M 0 430 C 230 530, 410 300, 670 445 S 1010 610, 1536 420;
-               M 0 470 C 180 360, 380 610, 620 470 S 1030 305, 1536 500"/>
-    </path>
-    <path d="M 0 360 C 210 230, 420 390, 640 290 S 1110 165, 1536 290"
-          fill="none" stroke="url(#auroraStroke)" stroke-width="40" stroke-linecap="round" opacity="0.36">
-      <animate attributeName="d" dur="22s" repeatCount="indefinite"
-               values="
-               M 0 360 C 210 230, 420 390, 640 290 S 1110 165, 1536 290;
-               M 0 290 C 240 170, 450 420, 700 300 S 1130 350, 1536 230;
-               M 0 360 C 210 230, 420 390, 640 290 S 1110 165, 1536 290"/>
-    </path>
-    <path d="M 80 780 C 280 650, 520 890, 760 740 S 1230 565, 1456 760"
-          fill="none" stroke="url(#auroraStroke)" stroke-width="38" stroke-linecap="round" opacity="0.32">
-      <animate attributeName="d" dur="24s" repeatCount="indefinite"
-               values="
-               M 80 780 C 280 650, 520 890, 760 740 S 1230 565, 1456 760;
-               M 80 730 C 250 900, 560 620, 820 800 S 1240 920, 1456 700;
-               M 80 780 C 280 650, 520 890, 760 740 S 1230 565, 1456 760"/>
-    </path>
+  <g style="animation: waveFloatBack 28s ease-in-out infinite; transform-origin: 35% 55%;">
+    <path d="M -400 370 C 200 220, 500 480, 1100 330 S 1700 480, 2100 350 L 2100 1000 L -400 1000 Z" fill="url(#wave-grad-1)" />
+  </g>
+  <g style="animation: waveFloatMid 34s ease-in-out infinite; transform-origin: 65% 45%;">
+    <path d="M -300 520 C 300 340, 800 580, 1350 400 S 1800 460, 2100 430 L 2100 1000 L -300 1000 Z" fill="url(#wave-grad-2)" />
+  </g>
+  <g style="animation: waveFloatFront 44s ease-in-out infinite; transform-origin: 50% 50%;">
+    <path d="M -300 0 C 400 260, 900 120, 1450 260 S 1800 0, 2100 -80 L 2100 -500 L -300 -500 Z" fill="url(#wave-grad-3)" />
   </g>
 
-  <g filter="url(#auroraBlur)" opacity="0.95">
-    <ellipse cx="210" cy="502" rx="250" ry="115" fill="url(#auroraBlob)" opacity="0.82"/>
-    <ellipse cx="1315" cy="505" rx="260" ry="110" fill="url(#auroraBlob)" opacity="0.75"/>
-    <ellipse cx="1220" cy="305" rx="220" ry="105" fill="url(#auroraBlob)" opacity="0.36"/>
-    <ellipse cx="350" cy="310" rx="240" ry="95" fill="url(#auroraBlob)" opacity="0.22"/>
-  </g>
-
-  <ellipse cx="768" cy="794" rx="470" ry="94" fill="url(#lowerGlow)" filter="url(#bigBlur)" opacity="0.70"/>
-
-  <!-- Terminal shadow -->
-  <rect x="150" y="220" width="1236" height="560" rx="28" fill="#000000" opacity="0.30" filter="url(#windowShadow)"/>
-
-  <!-- Terminal group -->
-  <g clip-path="url(#terminalClip)">
-    <!-- outer glass -->
-    <rect x="150" y="220" width="1236" height="560" rx="28"
-          fill="url(#glassFill)"
-          stroke="url(#windowEdge)" stroke-width="1.75"/>
-
-    <!-- subtle dark depth -->
-    <rect x="150" y="220" width="1236" height="560" rx="28" fill="#07080d" opacity="0.10"/>
-
-    <!-- upper-right refraction haze -->
-    <ellipse cx="1260" cy="315" rx="250" ry="110" fill="#ffffff" opacity="0.075" filter="url(#bigBlur)"/>
-    <ellipse cx="1220" cy="280" rx="165" ry="65" fill="#ffffff" opacity="0.060" filter="url(#bigBlur)"/>
-
-    <!-- lower-left / lower-right light bleed -->
-    <ellipse cx="320" cy="710" rx="320" ry="150" fill="#b98dff" opacity="0.09" filter="url(#bigBlur)"/>
-    <ellipse cx="1215" cy="705" rx="310" ry="140" fill="#b98dff" opacity="0.08" filter="url(#bigBlur)"/>
-
-    <!-- inner edge -->
-    <rect x="159" y="229" width="1218" height="542" rx="22"
-          fill="none" stroke="url(#innerEdge)" stroke-width="1.2"/>
-
-    <!-- glass highlight lines -->
-    <path d="M 175 250 C 485 232, 1010 234, 1382 250"
-          fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1.1"/>
-    <path d="M 175 263 C 520 250, 980 252, 1382 270"
-          fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1.2"/>
-
-    <!-- aurora glow inside glass -->
-    <g filter="url(#auroraBlur)" opacity="0.95">
-      <path d="M 70 620 C 275 500, 420 760, 680 635 S 1110 420, 1460 590"
-            fill="none" stroke="url(#auroraStroke)" stroke-width="50" stroke-linecap="round" opacity="0.72">
-        <animate attributeName="d" dur="14s" repeatCount="indefinite"
-                 values="
-                 M 70 620 C 275 500, 420 760, 680 635 S 1110 420, 1460 590;
-                 M 70 580 C 260 700, 505 470, 765 610 S 1150 760, 1460 560;
-                 M 70 620 C 275 500, 420 760, 680 635 S 1110 420, 1460 590"/>
-      </path>
-      <path d="M 95 690 C 320 610, 485 815, 725 700 S 1130 560, 1440 670"
-            fill="none" stroke="url(#auroraStroke)" stroke-width="30" stroke-linecap="round" opacity="0.42">
-        <animate attributeName="d" dur="18s" repeatCount="indefinite"
-                 values="
-                 M 95 690 C 320 610, 485 815, 725 700 S 1130 560, 1440 670;
-                 M 95 650 C 290 790, 520 555, 760 705 S 1155 825, 1440 630;
-                 M 95 690 C 320 610, 485 815, 725 700 S 1130 560, 1440 670"/>
-      </path>
-    </g>
-
-    <!-- grain -->
-    <rect x="150" y="220" width="1236" height="560" rx="28" filter="url(#noise)" opacity="0.16"/>
-
-    <!-- titlebar -->
-    <path d="M 178 220 H 1358 A 28 28 0 0 1 1386 248 V 278 H 150 V 248 A 28 28 0 0 1 178 220 Z"
-          fill="#2d1849"/>
-    <path d="M 178 221 H 1358 A 27 27 0 0 1 1385 248"
-          fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.0"/>
-    <path d="M 150 277 H 1386" fill="none" stroke="#140b1f" stroke-opacity="0.92" stroke-width="1.35"/>
-
-    <!-- buttons -->
-    <g>
-      <circle cx="192" cy="249" r="13" fill="#ff5f57"/>
-      <circle cx="192" cy="246" r="4.1" fill="#ffffff" opacity="0.22"/>
-      <circle cx="192" cy="249" r="13" fill="none" stroke="#000000" stroke-opacity="0.18" stroke-width="1"/>
-
-      <circle cx="236" cy="249" r="13" fill="#ffbd2e"/>
-      <circle cx="236" cy="246" r="4.1" fill="#ffffff" opacity="0.20"/>
-      <circle cx="236" cy="249" r="13" fill="none" stroke="#000000" stroke-opacity="0.18" stroke-width="1"/>
-
-      <circle cx="280" cy="249" r="13" fill="#28c840"/>
-      <circle cx="280" cy="246" r="4.1" fill="#ffffff" opacity="0.20"/>
-      <circle cx="280" cy="249" r="13" fill="none" stroke="#000000" stroke-opacity="0.18" stroke-width="1"/>
-    </g>
-
-    <!-- title -->
-    <text x="768" y="255" text-anchor="middle" class="mono"
-          font-size="27" fill="#e8ddff" opacity="0.84">
-      zligh@rust:~
-    </text>
-
-    <!-- prompt -->
-    <text x="195" y="365" class="mono" font-size="34" fill="#d9cbff" opacity="0.98">
-      zligh@rust:$
-    </text>
-
+  <g filter="url(#macos-shadow)" style="animation: windowFloatY 8s ease-in-out infinite;">
+    <rect x="390" y="105" width="820" height="390" rx="12" fill="url(#window-gradient)" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.5" />
     
-    <!-- main line -->
-    <g class="mono" font-size="62" font-weight="500" fill="#f9f6ff" filter="url(#textGlow)">
-      <text x="410" y="558">Just Use Rust.</text>
+    <g>
+      <clipPath id="titlebar-clip">
+        <rect x="390" y="105" width="820" height="46" rx="12" />
+      </clipPath>
+      <rect x="390" y="105" width="820" height="46" fill="url(#titlebar-gradient)" clip-path="url(#titlebar-clip)" />
+      <rect x="390" y="150" width="820" height="1" fill="#ffffff" fill-opacity="0.04" />
+    </g>
+    
+    <g filter="url(#button-glow)">
+      <circle cx="422" cy="128" r="8" fill="#ff5f56" stroke="#e0443e" stroke-width="0.5"/>
+      <circle cx="447" cy="128" r="8" fill="#ffbd2e" stroke="#dea123" stroke-width="0.5"/>
+      <circle cx="472" cy="128" r="8" fill="#27c93f" stroke="#1aaa2c" stroke-width="0.5"/>
+    </g>
+    <text x="800" y="134" class="title-text" text-anchor="middle">profile.txt</text>
 
-      <text x="900" y="558">
-        Brutal
-        <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
-                 calcMode="discrete"
-                 values="1;0;0;1"
-                 keyTimes="0;0.33;0.66;1"/>
-      </text>
-
-      <text x="900" y="558" opacity="0">
-        Brvtal
-        <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
-                 calcMode="discrete"
-                 values="0;1;0;0"
-                 keyTimes="0;0.33;0.66;1"/>
-      </text>
-
-      <text x="900" y="558" opacity="0">
-        Brut4l
-        <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
-                 calcMode="discrete"
-                 values="0;0;1;0"
-                 keyTimes="0;0.33;0.66;1"/>
+    <g transform="translate(800, 270)">
+      <text class="monospace-text" text-anchor="middle">Hello, I'm Zligh</text>
+      <text class="monospace-text" text-anchor="middle" dy="64">
+        currently my only skill is <tspan fill="#ff6a00" filter="url(#rust-glow)" font-weight="600">Rust</tspan><tspan class="blinking-cursor" fill="#ff6a00" filter="url(#rust-glow)" font-weight="600">|</tspan>
       </text>
     </g>
-
-    <!-- cursor -->
-    <path d="M 1185 503 V 565" stroke="#ffffff" stroke-width="8"
-          stroke-linecap="round" opacity="0.55">
-      <animate attributeName="opacity" values="0.55;0.08;0.55"
-               dur="0.55s" repeatCount="indefinite"/>
-    </path>
-<!-- footer -->
-    <text x="194" y="730" class="mono" font-size="24" fill="#bda7ff" opacity="0.60">
-      Rust
-    </text>
-
-    <!-- subtle bottom border bloom -->
-    <path d="M 170 774 C 480 804, 1030 804, 1370 774"
-          fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.0"/>
   </g>
 
-  <!-- outer faint vignette around terminal edges -->
-  <rect x="150" y="220" width="1236" height="560" rx="28" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.2"/>
+  <g transform="translate(1175, 385)" filter="url(#cursor-shadow)" style="overflow: visible;">
+    <g style="animation: cursorFloatX 7.2s ease-in-out infinite;">
+      <g style="animation: cursorFloatY 5.1s ease-in-out infinite;">
+        <path d="M 0,-35 L 0,35 M -6.3,0 L 6.3,0 M -16.8,-40.25 Q 0,-40.25 0,-27.3 M 16.8,-40.25 Q 0,-40.25 0,-27.3 M -16.8,40.25 Q 0,40.25 0,27.3 M 16.8,40.25 Q 0,40.25 0,27.3" 
+              stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              
+        <path d="M 0,-35 L 0,35 M -6.3,0 L 6.3,0 M -16.8,-40.25 Q 0,-40.25 0,-27.3 M 16.8,-40.25 Q 0,-40.25 0,-27.3 M -16.8,40.25 Q 0,40.25 0,27.3 M 16.8,40.25 Q 0,40.25 0,27.3" 
+              stroke="#0b0b0d" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      </g>
+    </g>
+  </g>
 </svg>
