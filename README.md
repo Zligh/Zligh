@@ -1,15 +1,21 @@
 <div align="center">
   <img src="./banner_window.svg" width="110%">
 
-  <img
+   <img
     src="./views_counter.svg"
-    width="260"
+    width="500"
   />
-
   <img
-    src="https://komarev.com/ghpvc/?username=Zligh&label=&color=00000000&style=flat-square"
-    height="1"
-    width="1"
+    src="https://komarev.com/ghpvc/?username=Zligh&style=flat-square&color=1a1a22"
+    style="
+      position:absolute;
+      opacity:0.01;
+      pointer-events:none;
+      width:120px;
+      height:28px;
+      left:190px;
+      top:8px;
+    "
   />
 
 </div>
