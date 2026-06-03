@@ -3,26 +3,5 @@
 </div>
 
 <div align="center">
-  <svg width="300" height="60" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:#ff6a00;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#ff8c42;stop-opacity:1" />
-      </linearGradient>
-      <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
-      </filter>
-    </defs>
-    
-    <!-- Background card -->
-    <rect x="10" y="10" width="280" height="40" rx="8" fill="#1a1a1a" filter="url(#shadow)" stroke="url(#grad1)" stroke-width="1.5"/>
-    
-    <!-- Eye icon -->
-    <circle cx="35" cy="30" r="3" fill="#ff6a00"/>
-    <ellipse cx="35" cy="30" rx="8" ry="6" fill="none" stroke="#ff6a00" stroke-width="1.5"/>
-    
-    <!-- Text -->
-    <text x="55" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff">Profile Views</text>
-    <text x="240" y="38" text-anchor="end" font-family="'Courier New', monospace" font-size="16" font-weight="700" fill="url(#grad1)">Loading...</text>
-  </svg>
+  <img src="./views_counter.svg" alt="Profile Views" width="300">
 </div>
