@@ -4,5 +4,5 @@
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Zligh/Zligh/main/views_counter_v2.svg" alt="Views Counter">
+  <img src="https://raw.githubusercontent.com/Zligh/Zligh/main/views_counter_v3.svg" alt="Views">
 </div>
